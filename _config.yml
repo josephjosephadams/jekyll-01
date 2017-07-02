@@ -18,8 +18,8 @@ email:
 description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: joeblogsdata
-github_username:  josephjosephadams
+twitter_username: jsphdms
+github_username:  jsphdms
 
 # Build settings
 markdown: kramdown
