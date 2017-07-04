@@ -18,30 +18,70 @@ Coming from the point-and-click world of Windows, it wasn't as easy as I expecte
 <!-- ![RStudio Ball](/assets/RStudio-Ball.jpg)
 ![Ubuntu Ball](/assets/ubuntu-ball.jpg) -->
 
-So here is my version of that big picture summary. Part 1 is a skeleton summary with all the links. Part 2 goes into some technical and psychological barriers I had to overcome.
+So here is my version of that big picture summary - in three parts: a checklist with links; a summary of some tricky bits; and lessons learnt from writing this post.
 
-### Part 1 - Skeleton Summary
-See [cran][cran]
+### Checklist
+1. Download and install R from [CRAN][cran]
+	* Click **Download R for Linux** then choose Ubuntu
+	* Follow the instructions
+1. Download and install [RStudio][RStudio]
 
-### Part 2 - Technical and Psychological Barriers
+### Tricky bits
+The first thing that struck me was how involved the process was. My first thoughts looking at the [CRAN][cran] instructions was *is this really all necessary?* *Why does this involve editing files and running terminal commands?* After following the lengthy instructions I finally had R and RStudio installed. 
 
-You will find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+But packages weren't downloading:
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+{% highlight r %}
+> install.packages("ggplot2")
+Installing package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+Warning in install.packages :
+  'lib = "/usr/local/lib/R/site-library"' is not writable
+Would you like to use a personal library instead?  (y/n) y
+Would you like to create a personal library
+NA
+to install packages into?  (y/n) y
+Error in install.packages : unable to create ‘NA’
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+I found [this solution][so-personal-lib] but it felt a little hacky. Eventually I realised I'd skipped  the very last step in the [CRAN][cran] instructions:
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+> Individual users can install R packages into their home directory. The simplest procedure is to create a file ~/.Renviron containing, e.g.,
+
+`R_LIBS_USER="~/lib/R/library"`
+
+> The install.packages() and update.packages() functions will then work in directory ~/lib/R/library.
+
+In human-speak this means:
+
+1. Users (i.e. you) do not yet have write access to a directory to download packages into
+1. You must create one and tell R about it
+
+So we have two steps:
+
+1. Create a directory to download packages into. This could be `~/lib/R/library` as suggested, or a version specific directory like `~/R/x86_64-pc-linux-gnu-library/3.4`
+1. Create a new file called `.Renviron` in your home directory and paste in something like this:
+
+`R_LIBS_USER="~/lib/R/library"`
+
+You should now have a directory to download packages into:
+
+{% highlight r %}
+> .libPaths()
+[1] "/home/your_username/R/x86_64-pc-linux-gnu-library/3.4"
+[2] "/usr/local/lib/R/site-library"                 
+[3] "/usr/lib/R/site-library"                       
+[4] "/usr/lib/R/library" 
+{% endhighlight %}
+
+<!-- Dirk Eddelbuettel explains [here][debian-bug]. -->
+
+### Lessons Learnt
+I wrote this post after installing R and Rstudio - thinking I'd remember everything I'd figured out... Wrong! In future I'll make notes as I go.
+
 [cran]: https://cran.r-project.org/
+[RStudio]: https://www.rstudio.com/products/rstudio/download/
+[so-personal-lib]: https://stackoverflow.com/questions/44861967/r-3-4-1-single-candle-personal-library-path-error-unable-to-create-na
+[yt-ubuntu-r]: https://www.youtube.com/watch?v=Nxl7HDUyw0I
+[yt-ubuntu-r-rstudio]: https://www.youtube.com/watch?v=kF0-FH-xBiE
+[debian-bug]: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=866768
