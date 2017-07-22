@@ -29,3 +29,9 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - bower_components/tether/docs/1-Overview
+  - bower_components/tether/docs/2-Examples
+  - bower_components/tether/docs/3-Advanced
+  - bower_components/tether/README.md
+  - bower_components/tether/CHANGELOG.md
+  - bower_components/bootstrap/README.md
