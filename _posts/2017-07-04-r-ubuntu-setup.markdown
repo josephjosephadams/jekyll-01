@@ -77,7 +77,9 @@ You should now have a directory to download packages into:
 <!-- Dirk Eddelbuettel explains [here][debian-bug]. -->
 
 ### Lessons Learnt
-I wrote this post after installing R and Rstudio - thinking I'd remember everything I'd figured out... Wrong! In future I'll make notes as I go.
+I wrote this post after installing R and Rstudio - thinking I'd remember everything I'd figured out... Wrong! In future I'll make notes as I go. 
+
+Secondly, the initial idea behind the article was to give an overview of setting up R on Ubuntu. In the end it became mainly about the specific issue covered in "Tricky bits". This is because I only found the solution while writing the article. And since this was freshest in my mind it became the main topic. I'm actually happy with this because, had I not started writing the post, I would likley have put up with this issue not being fixed.
 
 [cran]: https://cran.r-project.org/
 [RStudio]: https://www.rstudio.com/products/rstudio/download/
