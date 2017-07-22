@@ -5,7 +5,7 @@ date:   2017-07-04 12:03:13 +0100
 categories: r linux
 ---
 
-Since 2015 I've been using R and Linux separately. This week I took the plunge and set up my R workflow in Ubuntu. 
+Since 2015 I've been using R and Linux separately. This week I took the plunge and set up my R work flow in Ubuntu. 
 
 Coming from the point-and-click world of Windows, it wasn't as easy as I expected. Online resources explained each part of the process reasonably well. But a big picture summary was lacking. Something to give an idea of what would be involved start to finish. Especially for someone's first time.
 
@@ -18,9 +18,9 @@ Coming from the point-and-click world of Windows, it wasn't as easy as I expecte
 <!-- ![RStudio Ball](/assets/RStudio-Ball.jpg)
 ![Ubuntu Ball](/assets/ubuntu-ball.jpg) -->
 
-So here is my version of that big picture summary - in three parts: a checklist with links; a summary of some tricky bits; and lessons learnt from writing this post.
+So here is my version of that big picture summary - in three parts: a check-list with links; a summary of some tricky bits; and lessons learnt from writing this post.
 
-### Checklist
+### Check-list
 1. Download and install R from [CRAN][cran]
 	* Click **Download R for Linux** then choose Ubuntu
 	* Follow the instructions
@@ -44,7 +44,7 @@ to install packages into?  (y/n) y
 Error in install.packages : unable to create ‘NA’
 {% endhighlight %}
 
-I found [this solution][so-personal-lib] but it felt a little hacky. Eventually I realised I'd skipped  the very last step in the [CRAN][cran] instructions:
+I found [this solution][so-personal-lib] but it felt a bit hacky. Eventually I realised I'd skipped  the very last step in the [CRAN][cran] instructions:
 
 > Individual users can install R packages into their home directory. The simplest procedure is to create a file ~/.Renviron containing, e.g.,
 
@@ -79,7 +79,7 @@ You should now have a directory to download packages into:
 ### Lessons Learnt
 I wrote this post after installing R and Rstudio - thinking I'd remember everything I'd figured out... Wrong! In future I'll make notes as I go. 
 
-Secondly, the initial idea behind the article was to give an overview of setting up R on Ubuntu. In the end it became mainly about the specific issue covered in "Tricky bits". This is because I only found the solution while writing the article. And since this was freshest in my mind it became the main topic. I'm actually happy with this because, had I not started writing the post, I would likley have put up with this issue not being fixed.
+Secondly, the initial idea behind the article was to give an overview of setting up R on Ubuntu. In the end it became mainly about the specific issue covered in "Tricky bits". This is because I only found the solution while writing the article. And since this was freshest in my mind it became the main topic. I'm actually happy with this because, had I not started writing the post, I would likely have put up with this issue not being fixed.
 
 [cran]: https://cran.r-project.org/
 [RStudio]: https://www.rstudio.com/products/rstudio/download/
