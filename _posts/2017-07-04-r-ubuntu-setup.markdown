@@ -18,9 +18,9 @@ Coming from the point-and-click world of Windows, it wasn't as easy as I expecte
 <!-- ![RStudio Ball](/assets/RStudio-Ball.jpg)
 ![Ubuntu Ball](/assets/ubuntu-ball.jpg) -->
 
-So here is my version of that big picture summary - in three parts: a check-list with links; a summary of some tricky bits; and lessons learnt from writing this post.
+So here is my version of that big picture summary - in three parts: a checklist with links; a summary of some tricky bits; and lessons learnt from writing this post.
 
-### Check-list
+### Checklist
 1. Download and install R from [CRAN][cran]
 	* Click **Download R for Linux** then choose Ubuntu
 	* Follow the instructions
