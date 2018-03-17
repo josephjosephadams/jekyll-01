@@ -5,7 +5,7 @@ date:	2017-11-02 09:03:13 +0100
 categories: data collection
 ---
 
-> I wrote this post while working in the Mental Health Access Improvement Support Team ([MHAIST][MHAIST]) in NHS Scotland. I have since moved and this post is reproduced here with their permission.
+> I wrote this post while working in the Mental Health Access Improvement Support Team ([MHAIST][MHAIST]). I've since changed employer and this modified version is reproduced here with their permission.
 
 Opening a blank spreadsheet is a lot like beginning a New Year's resolution. With the best of intentions it's tempting to jump in and just start recording data. This may work in the short term with small data sets. But it takes a little more planning to collect data that will make a significant impact on your service.
 
@@ -89,11 +89,6 @@ Clumsy fingers and inappropriate data entry can cause the wrong data to be recor
 
 * **Regularly back up your data**. Backing up occasionally is better than nothing. A backup schedule with copies in multiple locations is even better.
 * **Never delete anything (within reason)**. An alternative to deleting a row of data is to include a “deleted” or “ignore” column. Fill this column with values like TRUE/FALSE, or "Active"/"Inactive". This reduces the risk of deleting the wrong thing.
-
-## Get Support from MHAIST
-
-We hope these tips got you thinking about data collection in the context of your service. If so, you may like to know that MHAIST has an Information Analyst embedded within each health board. We’re connected with each other nationally and are already supporting a number of teams to collect data that matters to them (e.g. outcome measures like Core-10 and SDQ). Interested? Get in touch [online][MHAIST-ihub] or via [twitter][MHAIST-twitter].
-
 
 [MHAIST]: http://www.isdscotland.org/Health-Topics/Mental-Health/MHAIST/
 [MHAIST-ihub]: http://ihub.scot/a-z-programmes/mental-health-access/
