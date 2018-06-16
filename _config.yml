@@ -35,3 +35,6 @@ exclude:
   - bower_components/tether/README.md
   - bower_components/tether/CHANGELOG.md
   - bower_components/bootstrap/README.md
+
+# Google Analytics
+google_analytics: UA-120955806-1
